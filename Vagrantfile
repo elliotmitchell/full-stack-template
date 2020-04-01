@@ -41,7 +41,8 @@ Vagrant.configure("2") do |config|
     sudo a2ensite 001-web
     sudo service apache2 reload
 
-    # Setup MySQL username and password
+    # Setup MySQL DB and add username and password
+    mysql -e "CREATE DATABASE `so-sure-local`;"
     debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
     debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
     apt-get install -y mysql-server
