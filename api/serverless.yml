@@ -1,0 +1,24 @@
+service: so-sure-v2
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  environment: ${file(./.env):${opt:stage, self:provider.stage}}
+
+functions:
+  testHello:
+    handler: tests/hello.handler
+    events:
+      - http: GET /tests/hello
+  testMysql:
+    handler: tests/mysql.handler
+    events:
+      - http: GET /tests/mysql
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    host: 0.0.0.0
+    httpPort: 3000

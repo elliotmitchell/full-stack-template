@@ -1,0 +1,6 @@
+.vagrant
+api/node_modules
+api/jspm_packages
+api/.serverless
+api/.env*
+api/env.js
