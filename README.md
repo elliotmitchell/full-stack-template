@@ -13,6 +13,7 @@ Template for spinning up a full stack dev environment.
 ## Dev Ops
  - AWS
  - Terraform
+ - Serverless
 
 ```
 vagrant up
