@@ -7,6 +7,7 @@ Template for spinning up a full stack dev environment.
  - Microservice API
  - NodeJS
  - MySQL
+ - MongoDB
 
 ## Frontend
 
